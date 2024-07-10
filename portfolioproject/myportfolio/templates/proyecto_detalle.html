@@ -1,0 +1,53 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="display-1">{{ proyecto.titulo }}</h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <img src="{{ proyecto.imagen.url }}" alt="{{ proyecto.titulo }}" class="img-fluid">
+        <div class="d-flex flex-column align-items-start mt-3">
+          <p><strong>Technologies:</strong> {{ proyecto.tecnologias.all|join:", " }}</p>
+          <div class="d-flex">
+            <a href="{{ proyecto.link_sitio }}" class="btn btn-primary me-2">View Site</a>
+            <a href="{{ proyecto.link_repositorio }}" class="btn btn-secondary">View Repo</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Description:</strong> {{ proyecto.descripcion }}</p>
+        <h3>Detailed Content</h3>
+        <div>{{ proyecto.contenido|safe }}</div> <!-- Usar el filtro 'safe' para permitir HTML -->
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .display-1 {
+      font-size: 7rem;
+      font-weight: bold;
+      font-family: 'Source Code Pro', monospace;
+    }
+    .btn-primary, .btn-secondary {
+      background-color: rgba(247, 15, 98, 0.5);
+      border: none;
+      margin: 10px 0;
+      border-radius: 0;
+      color: grey;
+    }
+    .btn-primary:hover, .btn-secondary:hover {
+      background-color: rgba(247, 15, 98, 1);
+      color: white;
+    }
+    .col-md-6{
+      font-size: 14px;
+      text-align: justify !important;
+    }
+    .me-2 {
+      margin-right: 10px;
+    }
+    .d-flex.flex-column.align-items-start.mt-3 {
+      margin-top: 20px;
+    }
+  </style>
+{% endblock %}

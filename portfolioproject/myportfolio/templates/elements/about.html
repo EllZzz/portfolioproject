@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me Section</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #about-me {
+            padding: 10rem 1rem; 
+        }
+
+        #about-me h1 {
+            font-size: 4rem; 
+            margin-bottom: 2rem;
+        }
+
+        #about-me img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #about-me .content {
+            font-size: 1rem; 
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #about-me {
+                padding: 5rem 1rem;
+            }
+
+            #about-me h1 {
+                font-size: 2.5rem;
+            }
+
+            #about-me .content {
+                font-size: 1rem; /* Adjust font size for smaller screens */
+            }
+        }
+
+        .scrollable-container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- About Me Section -->
+    <section id="about-me" class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <img src="static/image/profile.png" alt="Profile image" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h1>About Me</h1>
+                <div class="content">
+                    <p><strong>Name:</strong> Ella G. Zampeze Velásquez</p>
+                    <p><strong>Birth:</strong> January 2</p>
+                    <p><strong>Info:</strong> Watching movies, enjoying a cup of tea, making plans at home, or spending time with my loved ones are my favorite activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

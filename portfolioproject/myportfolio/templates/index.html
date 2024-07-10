@@ -1,0 +1,64 @@
+{% load bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    {% bootstrap_css %}
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- Boxicons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="no-scroll">
+    <!-- NAVBAR -->
+    {% include 'elements/navbar.html' %}
+
+    <!-- HOME -->
+    <section id="home" class="py-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-container align-self-center text-center">
+                    <h3>HEY THERE!</h3>
+                    <h1><span>I'M ELLA</span></h1>
+                    <p>STUDENT OF <span>I.T ENGINEERING</span></p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'image/computer.png' %}" alt="Computer" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    {% include 'elements/projects.html' %}
+
+    <!-- ABOUT -->
+    {% include 'elements/about.html' %}
+
+    <!-- LANGUAGES -->
+    {% include 'elements/languages.html' %}
+
+    <!-- CONTACT -->
+    {% include 'elements/contact.html' %}
+
+    <!-- FOOTER -->
+    {% include 'elements/footer.html' %}
+
+
+    <!-- Bootstrap JavaScript -->
+    {% bootstrap_javascript %}
+    <!-- Custom JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

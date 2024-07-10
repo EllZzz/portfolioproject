@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+    --color-body: #181818;
+    --color-heading: #ebeef5;
+    --color1: #F70F62;
+    --color2: #F25380;
+    --color3: #242424;
+    --sidebar-width: 240px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* General Body Styles */
+
+body {
+    background-color: var(--color-body) !important; 
+    color: var(--color-heading); 
+    font-family: 'Source Code Pro', monospace;
+    padding: 0; 
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Media scrollbar hidden/auto */
+@media (min-width: 1024px) {
+    body.no-scroll {
+        overflow: hidden; 
+    }
+    .content {
+        overflow-y: auto; 
+        max-height: calc(100vh - 50px);
+    }
+}
+
+@media (max-width: 1023px) {
+    body {
+        overflow: auto;
+    }
+}
+
+/* Navbar Styles */
+
+.navbar {
+    margin-bottom: 20px; 
+}
+
+/* Begin Section Styles */
+
+.begin {
+    background-color: var(--color3); 
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+/* Text Container Styles */
+
+.text-container {
+    color: #ebeef5; 
+}
+
+.text-container h1 {
+    color: #ebeef5; 
+}
+
+.text-container p {
+    color: #ebeef5; 
+}
+
+.text-container h3 {
+    margin: 0; 
+    line-height: 1.5;
+}
+
+.text-container p span, h1 span {
+    color: #F70F62; 
+}
+
+/* Footer Styles */
+
+.footer {
+    padding: 10px 0; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+}
